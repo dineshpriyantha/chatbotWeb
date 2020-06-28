@@ -22,6 +22,7 @@ namespace chatbotWeb.Controllers
         /// <returns></returns>
         public JsonResult GetResponse(string msg)
         {
+            // create client 
             var client = new RestClient("http://127.0.0.1:4000/get?msg=" + msg);
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
